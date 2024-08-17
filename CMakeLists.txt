@@ -15,7 +15,7 @@ include("cmake/Helpers.cmake")
 include("cmake/GodotHelpers.cmake")
 
 # Download GDExtension
-download_godot_cpp(4.2.2)
+download_godot_cpp(4.3)
 
 # Setup platform architecture
 set(ARCHITECTURE ${CMAKE_SYSTEM_PROCESSOR})

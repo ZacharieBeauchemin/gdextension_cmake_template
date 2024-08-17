@@ -19,10 +19,10 @@ target_compile_definitions(${PROJECT_NAME} PUBLIC HOT_RELOAD_ENABLED)
 set(PROJECT_OUTPUT_PATH "${CMAKE_SOURCE_DIR}/${GODOT_PROJECT_PATH}/${GD_EXTENSIONS_PATH}/${PROJECT_NAME}")
 
 # Create a symlink of the dynamic library to the godot project folder
-create_symlink_project_output(${PROJECT_OUTPUT_PATH} "${PROJECT_NAME}${CMAKE_SHARED_LIBRARY_SUFFIX}")
+# create_symlink_project_output(${PROJECT_OUTPUT_PATH} "${PROJECT_NAME}${CMAKE_SHARED_LIBRARY_SUFFIX}")
 
 # Alternatively you can copy the dynamic library to the folder godot project instead of creating a symlink
-# copy_project_output(${PROJECT_OUTPUT_PATH} "${PROJECT_NAME}${CMAKE_SHARED_LIBRARY_SUFFIX}")
+copy_project_output(${PROJECT_OUTPUT_PATH} "${PROJECT_NAME}${CMAKE_SHARED_LIBRARY_SUFFIX}")
 
 # Copy configured .gdextension to output folder
 configure_gd_extension("${CMAKE_SOURCE_DIR}/template.gdextension" ${PROJECT_OUTPUT_PATH} ${PROJECT_NAME})

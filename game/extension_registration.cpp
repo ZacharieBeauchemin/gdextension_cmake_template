@@ -11,7 +11,7 @@ void initializer(const ModuleInitializationLevel level) {
     return;
   }
 
-  ClassDB::register_class<Print>();
+  ClassDB::register_runtime_class<Print>();
 }
 
 void terminator(ModuleInitializationLevel level) {}
